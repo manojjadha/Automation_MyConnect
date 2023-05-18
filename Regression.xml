@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="3" name="VerifyLoginPage">
+    <classes>
+      <class name="RegressionSuit.VerifyLoginPage"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="3" name="VerifyHPmenu">
+    <classes>
+      <class name="RegressionSuit.VerifyHPmenu"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="3" name="VerifyHomePage">
+    <classes>
+      <class name="RegressionSuit.VerifyHomePage"/>
+    </classes>
+     </test> <!-- Test -->
+   <test thread-count="3" name="VerifyDisplayHpage">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage"/>
+    </classes>
+    </test> <!-- Test -->
+    <test thread-count="3" name="VerifyLeaderSpeakPage">
+    <classes>
+      <class name="RegressionSuit.VerifyLeaderSpeakPage"/>
+    </classes>
+    </test> <!-- Test -->
+   <test thread-count="3" name="Deletepost">
+    <classes>
+      <class name="RegressionSuit.VerifyDeletePost"/>
+    </classes>
+     </test> <!-- Test -->
+   <test thread-count="3" name="VerifyCompanyWithHearts">
+    <classes>
+      <class name="RegressionSuit.VerifyCompanyWithHearts"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="3" name="VerifyEvents">
+    <classes>
+      <class name="RegressionSuit.VerifyEvents"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="SavePost">
+    <classes>
+      <class name="RegressionSuit.VerifySavePost"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="celebration">
+    <classes>
+      <class name="RegressionSuit.VerifycelebrationPage"/>
+    </classes>
+   </test> <!-- Test -->
+   <test thread-count="3" name="ReactionComment1">
+    <classes>
+      <class name="RegressionSuit.VerifyReactionComment1"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="3" name="ReactionPageRandR">
+    <classes>
+      <class name="RegressionSuit.VerifyPageRandR"/>
+    </classes>
+  </test> <!-- Test -->
+   
+   
+   
+   
+  
+  
+  
+ 
+ 
+  
+   
+  
+  
+</suite> <!-- Suite -->

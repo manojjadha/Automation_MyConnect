@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]">
+  <test parallel="none" name="VerifyHomePage(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="verifypost"/>
+          <include name="verifyJobReferral"/>
+          <include name="launchBrowser"/>
+          <include name="verifyAnnouncementsection"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+          <include name="verifyBirthdayssection"/>
+          <include name="verifyUpcomingEvents"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- VerifyHomePage(failed) -->
+  <test parallel="none" name="VerifyDisplayHpage(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="verifyUpcomingEvents"/>
+          <include name="verifyJobReferral"/>
+          <include name="verifyNewJoinerssection"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- VerifyDisplayHpage(failed) -->
+  <test parallel="none" name="VerifyLeaderSpeakPage(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="verifyLeaderspeakpage"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- VerifyLeaderSpeakPage(failed) -->
+  <test parallel="none" name="Deletepost(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="CommentWitheReaction"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- Deletepost(failed) -->
+  <test parallel="none" name="VerifyCompanyWithHearts(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="verifyCompanyWithHearts"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- VerifyCompanyWithHearts(failed) -->
+  <test parallel="none" name="VerifyEvents(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="verifyEvents"/>
+          <include name="goToMainPage"/>
+          <include name="verifyUpcomingEvents"/>
+          <include name="verifyAnnouncement"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- VerifyEvents(failed) -->
+  <test parallel="none" name="SavePost(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="verifySavepost1"/>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="verifyHidepost"/>
+          <include name="verifypreSavepost"/>
+          <include name="verifyHidepost1"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- SavePost(failed) -->
+  <test parallel="none" name="ReactionPageRandR(failed)" preserve-order="true">
+    <classes>
+      <class name="RegressionSuit.VerifyDisplayHpage">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDisplayHpage -->
+      <class name="RegressionSuit.VerifyCompanyWithHearts">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyCompanyWithHearts -->
+      <class name="RegressionSuit.VerifyDeletePost">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyDeletePost -->
+      <class name="RegressionSuit.VerifyLoginPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToLoginPage"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      <class name="RegressionSuit.VerifyPageRandR">
+        <methods>
+          <include name="CommentWithReaction"/>
+          <include name="verifyComment"/>
+          <include name="verifyReactionElementZeroGreaterThenOne"/>
+          <include name="verifycommentCountElement"/>
+          <include name="launchBrowser"/>
+          <include name="verifyPageRandRAwards"/>
+          <include name="verifyAccolades"/>
+          <include name="verifyPromotions"/>
+          <include name="testCommentcount"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyPageRandR -->
+      <class name="RegressionSuit.VerifyHomePage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHomePage -->
+      <class name="RegressionSuit.VerifyLeaderSpeakPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyLeaderSpeakPage -->
+      <class name="RegressionSuit.VerifycelebrationPage">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifycelebrationPage -->
+      <class name="RegressionSuit.VerifyHPmenu">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+          <include name="launchMyConnectTing"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyHPmenu -->
+      <class name="RegressionSuit.VerifyEvents">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyEvents -->
+      <class name="RegressionSuit.VerifySavePost">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="launchBrowser"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifySavePost -->
+      <class name="RegressionSuit.VerifyReactionComment1">
+        <methods>
+          <include name="launchMyConnectTing"/>
+          <include name="goToMainPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- RegressionSuit.VerifyReactionComment1 -->
+    </classes>
+  </test> <!-- ReactionPageRandR(failed) -->
+</suite> <!-- Failed suite [Suite] -->
