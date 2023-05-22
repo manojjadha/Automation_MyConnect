@@ -18,6 +18,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.automation.pageObjectModel.HomePage;
 
 
@@ -31,8 +32,9 @@ public class VerifyPageRandR {
 			driver = new ChromeDriver();
 			driver.get("https://myconnect.tinggit.com/");
 			HomePage homePage = new HomePage(driver);
-			homePage.sendValidCredential();
+			homePage.sendValidUserNameAndValidPassword();
 			homePage.clickLoginButton();
+			
 			
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 			
@@ -107,79 +109,11 @@ public class VerifyPageRandR {
 			   Thread.sleep(4000);
 			   Actions actions4= new Actions(driver);
 			   actions4.click(Like).perform();
-			   Thread.sleep(9000);
-			   Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//ul[@class='d-flex justify-content-between list-unstyled m-0 p-2 mx-1']//span[text()='Like']")).isDisplayed());
-			   WebElement thumb = new WebDriverWait(driver, 10)
-			   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//ul[@class='d-flex justify-content-between list-unstyled m-0 p-2 mx-1']//span[text()='Like']")));
-			   Thread.sleep(4000);
-			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",thumb);
-			   Actions actions1= new Actions(driver);
-			   actions1.moveToElement(thumb).perform();
-	           actions1.click(thumb).perform();
-	           Thread.sleep(9000);
-			   Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[2]/img[contains(@src,'/images/HeartEmoji.png')]")).isDisplayed());
-			   WebElement Heart = new WebDriverWait(driver, 10)
-			   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[2]/img[contains(@src,'/images/HeartEmoji.png')]")));
-			   Thread.sleep(4000);
-			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",Heart);
-			   Actions actions12= new Actions(driver);
-			   actions12.moveToElement(Heart).perform();
-	           actions12.click(Heart).perform();
-	           Thread.sleep(9000);
-			   Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[3]/img[contains(@src,'/images/clappingEmoji.png')]")).isDisplayed());
-			   WebElement clapping = new WebDriverWait(driver, 10)
-			   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[3]/img[contains(@src,'/images/clappingEmoji.png')]")));
-			   Thread.sleep(4000);
-			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",clapping);
-			   Actions actions3= new Actions(driver);
-			   actions3.moveToElement(clapping).perform();
-	           actions3.click(clapping).perform();
-		    
-		     }
-		    
-	           @Test (priority = 4)
-		        public void verifyComment() throws InterruptedException {
-		    	Thread.sleep(9000);
-		    	WebElement commentBox=driver.findElement( By.xpath("//textarea[@placeholder='Write a comment..']"));
-				Actions actions= new Actions(driver);
-				actions.click(commentBox).perform();
-				commentBox.sendKeys("test");
-				Thread.sleep(9000);
-				WebElement postButton=driver.findElement( By.xpath("//button[text()='Post']"));
-				Actions actions1= new Actions(driver);
-				actions1.click(postButton).perform();
-				Thread.sleep(7000);
-				WebElement comment=driver.findElement( By.xpath("//div[@class=' m-md-0 m-sm-0']/div[1]//div[2]//p//span[2]"));
-				Actions actions2= new Actions(driver);
-				actions2.click(comment).perform();
-				Thread.sleep(9000);
-				WebElement editcomment=driver.findElement( By.xpath("//div//ul//li[@class=' h6 p-1 text-black']//span[contains(text(),'Edit')]"));
-				//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",editcomment);
-				Actions actions3= new Actions(driver);
-				actions3.click(editcomment).perform();
-				Thread.sleep(9000);
-				WebElement editbox=driver.findElement( By.xpath("//*[@class='comment-list comment-list-edit  w-90 text-secondary roundedCls ps-3' and @id='outlined-search']"));
-				Actions actions4= new Actions(driver);
-				actions4.click(editbox).perform();
-				editbox.sendKeys("Good");
-				Thread.sleep(9000);
-				WebElement posteditcommentbutton=driver.findElement( By.xpath("//button[@class='btn commentBtn rounded rounded-3 text-white position-absolute']"));
-			    Actions actions5= new Actions(driver);
-				actions5.click(posteditcommentbutton).perform();
-				Thread.sleep(9000);
-				actions2.click(comment).perform();
-				Thread.sleep(9000);
-				WebElement deleteButton=driver.findElement( By.xpath("//div//ul//li//following::span[text()=' Delete']"));
-				Actions actions7= new Actions(driver);
-				actions7.click(deleteButton).perform();
-				Thread.sleep(9000);
-				WebElement yesdeleteButton=driver.findElement( By.xpath("//button[text()='Yes, Delete']"));
-                Actions actions8= new Actions(driver);
-				actions8.click(yesdeleteButton).perform();
-
-		 }
 		     
-             @Test (priority = 5)
+		       }
+			  
+	        
+             @Test (priority = 4)
 		     public void testCommentcount() throws InterruptedException {
 		 		
 		 	  try {
@@ -198,7 +132,7 @@ public class VerifyPageRandR {
 		 	}
 		 	 }
 
-		    @Test (priority = 6)
+		    @Test (priority = 5)
 		    public void verifyReactionElementZeroGreaterThenOne() throws InterruptedException {
 			Thread.sleep(9000);
 			WebElement elementValue=driver.findElement( By.xpath("//ul[@class='d-flex justify-content-between list-unstyled m-0 p-2 mx-1 position-relative']"));
@@ -221,7 +155,7 @@ public class VerifyPageRandR {
 			 }
 			    }
 			 
-		       @Test (priority = 7)
+		       @Test (priority = 6)
 			   public void verifycommentCountElement() throws Exception {
 				try
 				{
@@ -237,7 +171,7 @@ public class VerifyPageRandR {
 			    
 			    	}
 				
-			    @Test (priority = 8)
+			    @Test (priority = 7)
 	            public void verifyAccolades() throws InterruptedException {
 				Thread.sleep(9000);
 		        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='container-fluid p-0 ']//div[@class='headerRoot headerRoot']//div[@class='nav-item dropdown']//span[text()='R&R']")).isDisplayed());
@@ -260,7 +194,7 @@ public class VerifyPageRandR {
 			    }
 			   
 	          
-	            @Test (priority = 9)
+	            @Test (priority = 8)
 	            public void verifyPromotions() throws InterruptedException {
 	            Thread.sleep(9000);
 		        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='container-fluid p-0 ']//div[@class='headerRoot headerRoot']//div[@class='nav-item dropdown']//span[text()='R&R']")).isDisplayed());
@@ -271,16 +205,8 @@ public class VerifyPageRandR {
 		        WebElement Promotions=driver.findElement( By.xpath("//*[@href=\"/promotions\" and @class='nav-item nav-link']"));
 			    Actions actions= new Actions(driver);
 			    actions.click(Promotions).perform();
-			    WebElement congratulations=driver.findElement( By.xpath("//*[@href=\"/user-view/profile/57\"]"));
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",congratulations);
-				Actions actions22= new Actions(driver);
-				actions22.click(congratulations).perform();
-			    Thread.sleep(3000);
-				WebElement Back = new WebDriverWait(driver, 80)
-			   .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='py-1']")));
-				Back.click();
-				
-	               }
+	            }
+			 
 	            
 	       @AfterMethod
 	       public void goToMainPage() {

@@ -1,55 +1,54 @@
 package RegressionSuit;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.w3c.dom.Comment;
 
-import com.Browser.Pojo;
 import com.automation.pageObjectModel.HomePage;
 
+
 public class VerifyDeletePost {
-	
-	WebDriver driver;
-	HomePage homePage = new HomePage(driver);
-	private WebElement likebutton;
-	@BeforeClass
-	public void launchBrowser(){
-		driver = Pojo.openChromeBrowser();
+
+		WebDriver driver;
 		
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		@BeforeClass
+		public void launchBrowser(){
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32 (1)\\chromedriver.exe");
+			
+			driver = new ChromeDriver();
+			driver.get("https://myconnect.tinggit.com/");
+			HomePage homePage = new HomePage(driver);
+			homePage.sendValidUserNameAndValidPassword();
+			homePage.clickLoginButton();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
+			driver.manage().window().maximize();
+			
+			
+		}
 		
-		driver.manage().window().maximize();
-		
-		
-	}
-	
-	@BeforeClass 
-	
-	public void launchMyConnectTing() {
-		driver.get("https://myconnect.tinggit.com/");
-		HomePage homePage = new HomePage(driver);
-		homePage.sendValidCredential();
-		homePage.clickLoginButton();
-	
-	}
-	
+		@BeforeMethod 
+		public void launchMyConnectTing() throws InterruptedException {
+			
+			
+			System.out.println("hello");
+			Thread.sleep(9000);
+		}
+
 	
 	@Test (priority = 1)
 	
@@ -89,7 +88,6 @@ public class VerifyDeletePost {
 		     WebElement Like = new WebDriverWait(driver, 10)
 	        .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//ul[@class='d-flex justify-content-between list-unstyled m-0 p-2 mx-1']//span[text()='Like']")));
 		     Thread.sleep(4000);
-		     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",Like);
 			 Actions actions= new Actions(driver);
 			 actions.moveToElement(Like).perform();
 			 Thread.sleep(4000);
@@ -97,7 +95,6 @@ public class VerifyDeletePost {
 		     WebElement thumb = new WebDriverWait(driver, 10)
 		     .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']")));
 		     Thread.sleep(4000);
-		     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",thumb);
 			 Actions actions1= new Actions(driver);
 			 actions1.moveToElement(thumb).perform();
              actions1.click(thumb).perform();

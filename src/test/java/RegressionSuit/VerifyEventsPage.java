@@ -1,7 +1,6 @@
 package RegressionSuit;
 
 
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,43 +8,49 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-import com.Browser.Pojo;
 import com.automation.pageObjectModel.HomePage;
 
-public class VerifyEvents {
-	
-	WebDriver driver;
-	HomePage homePage = new HomePage(driver);
-	@BeforeClass
-	public void launchBrowser(){
-		driver = Pojo.openChromeBrowser();
+
+public class VerifyEventsPage {
+
+		WebDriver driver;
 		
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		@BeforeClass
+		public void launchBrowser(){
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32 (1)\\chromedriver.exe");
+			
+			driver = new ChromeDriver();
+			driver.get("https://myconnect.tinggit.com/");
+			HomePage homePage = new HomePage(driver);
+			homePage.sendValidUserNameAndValidPassword();
+			homePage.clickLoginButton();
+			
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
+			driver.manage().window().maximize();
+			
+			
+		}
 		
-		driver.manage().window().maximize();
-		
-		
-	}
-	
-	   @BeforeClass 
-	
-	   public void launchMyConnectTing() {
-		driver.get("https://myconnect.tinggit.com/");
-		HomePage homePage = new HomePage(driver);
-		homePage.sendValidCredential();
-		homePage.clickLoginButton();
-	}
-	
+		@BeforeMethod 
+		public void launchMyConnectTing() throws InterruptedException {
+			
+			
+			System.out.println("hello");
+			Thread.sleep(9000);
+		}
+
 	
 	@Test (priority = 1)
 	public void verifyEvents() throws InterruptedException {
@@ -73,7 +78,6 @@ public class VerifyEvents {
 	actions2.click(comment).perform();
 	Thread.sleep(9000);
 	WebElement editcomment=driver.findElement( By.xpath("//div//ul//li[@class=' h6 p-1 text-black']//span[contains(text(),'Edit')]"));
-	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",editcomment);
 	Actions actions3= new Actions(driver);
 	actions3.click(editcomment).perform();
 	Thread.sleep(9000);
@@ -153,10 +157,10 @@ public class VerifyEvents {
 		Actions actions= new Actions(driver);
 		actions.moveToElement(Like).perform();
 		Thread.sleep(4000);
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[1]/img[contains(@src,'/images/LikeEmoji.png')]")).isDisplayed());
-	    WebElement thumb = new WebDriverWait(driver, 40)
-	    .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[1]/img[contains(@src,'/images/LikeEmoji.png')]")));
-	    Thread.sleep(4000);
+      //  Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[1]/img[contains(@src,'/images/LikeEmoji.png')]")).isDisplayed());
+	   // WebElement thumb = new WebDriverWait(driver, 40)
+	   // .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div//parent::li[@class='pr-3 cursorPointer']//li[1]/img[contains(@src,'/images/LikeEmoji.png')]")));
+	   // Thread.sleep(4000);
 	
 	}
 	

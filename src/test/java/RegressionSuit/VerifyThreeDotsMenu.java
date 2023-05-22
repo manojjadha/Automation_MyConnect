@@ -20,7 +20,8 @@ import org.testng.annotations.Test;
 import com.automation.pageObjectModel.HomePage;
 
 
-public class VerifySavePost {
+
+public class VerifyThreeDotsMenu {
 
 		WebDriver driver;
 		
@@ -33,7 +34,7 @@ public class VerifySavePost {
 			
 			driver.get("https://myconnect.tinggit.com/");
 			HomePage homePage = new HomePage(driver);
-			homePage.sendValidCredential();
+			homePage.sendValidUserNameAndValidPassword();
 			homePage.clickLoginButton();
 			
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -59,43 +60,40 @@ public class VerifySavePost {
 		   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//a[@class='my-dropdown-toggle h5 text-decoration-none text-black' and @data-toggle='dropdown'] ")));
 		    preSavepost.click();
 		    Thread.sleep(9000);
-			Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Save post']")).isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Saved Post']")).isDisplayed());
 			Thread.sleep(9000);
 			WebElement Savepost = new WebDriverWait(driver, 20)
-		   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Save post']")));
+		   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Saved Post']")));
 		    Savepost.click();
 			
 		    }
 		
-	    @Test (priority = 2)
-		public void verifySavepost1() throws Exception {
-        Assert.assertTrue(driver.findElement(By.xpath("//img[@class='userLogo']")).isDisplayed());
-	    WebElement User = new WebDriverWait(driver, 10)
-		.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='userLogo']")));
-		Thread.sleep(4000);
-	    Actions actions= new Actions(driver);
-	    actions.click(User).perform();
+	       @Test (priority = 2)
+		   public void verifySavepost1() throws Exception {
+           Assert.assertTrue(driver.findElement(By.xpath("//img[@class='userLogo']")).isDisplayed());
+	       WebElement User = new WebDriverWait(driver, 10)
+		  .until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='userLogo']")));
+		   Thread.sleep(4000);
+	       Actions actions= new Actions(driver);
+	       actions.click(User).perform();
 	    
-	    Assert.assertTrue(driver.findElement(By.xpath("//*[@class='fs-16 fontWeight500 descriptionColor ps-2']")).isDisplayed());
-	    WebElement Favorite = new WebDriverWait(driver, 10)
-		.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='fs-16 fontWeight500 descriptionColor ps-2']")));
-		Thread.sleep(4000);
-	    Actions actions1= new Actions(driver);
-	    actions1.click(Favorite).perform();
-	    
-	    
-	    Thread.sleep(2000);
-		Assert.assertTrue(driver.findElement(By.xpath("//div[@class='row justify-content-center mx-md-2 mx-lg-2 m-0 ']//div[@class='MuiBox-root css-8atqhb']/div[2]//p[@class='MuiTypography-root MuiTypography-body1 css-9l3uo3']//div[@class='bg-default border roundedCls mt-3']//li//div[2]//a")).isDisplayed());
-		Thread.sleep(9000);
-		WebElement Feed1 = new WebDriverWait(driver, 40)
-	   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='row justify-content-center mx-md-2 mx-lg-2 m-0 ']//div[@class='MuiBox-root css-8atqhb']/div[2]//p[@class='MuiTypography-root MuiTypography-body1 css-9l3uo3']//div[@class='bg-default border roundedCls mt-3']//li//div[2]//a")));
-		Feed1 .click();
-		
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@class='dropdown-menu bg-default shadow show']//li[3]")).isDisplayed());
-		Thread.sleep(9000);
-		WebElement Unsavepost = new WebDriverWait(driver, 40)
-	   .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='dropdown-menu bg-default shadow show']//li[3]")));
-		Unsavepost.click();
+	       Assert.assertTrue(driver.findElement(By.xpath("//div[@class='userInfoMenu position-relative']//ul//li[2]//div//a[text()='My Favorite']")).isDisplayed());
+	       WebElement Favorite = new WebDriverWait(driver, 10)
+		  .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='userInfoMenu position-relative']//ul//li[2]//div//a[text()='My Favorite']")));
+		   Thread.sleep(4000);
+	       Actions actions1= new Actions(driver);
+	       actions1.click(Favorite).perform();
+	       Thread.sleep(2000);
+		   Assert.assertTrue(driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-1io09qe']")).isDisplayed());
+		   Thread.sleep(9000);
+		   WebElement Feed1 = new WebDriverWait(driver, 40)
+	      .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-1io09qe']")));
+		   Feed1 .click();
+		   Assert.assertTrue(driver.findElement(By.xpath("//*[@class='dropdown-menu bg-default shadow show']//li[3]")).isDisplayed());
+	       Thread.sleep(9000);
+		   WebElement Unsavepost = new WebDriverWait(driver, 40)
+	      .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='dropdown-menu bg-default shadow show']//li[3]")));
+		   Unsavepost.click();
 		
 	     }
 	      
@@ -129,8 +127,6 @@ public class VerifySavePost {
 			Thread.sleep(4000);
 			Actions actions= new Actions(driver);
 		    actions.click(User).perform();
-		    
-		    
 		    Assert.assertTrue(driver.findElement(By.xpath("//*[@class='referalText fs-16 fontWeight500']")).isDisplayed());
 		    WebElement ViewProfile = new WebDriverWait(driver, 20)
 			.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='referalText fs-16 fontWeight500']")));
@@ -147,6 +143,7 @@ public class VerifySavePost {
 			WebElement  Hiddenposts = new WebDriverWait(driver, 20)
 		   .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='justify-content-around mx-lg-5 mx-xl-5 pt-4 pt-lg-0 pt-md-0 pt-xl-0 px-2 px-lg-0 px-md-0 px-xl-0 row']/div[2]//div[@class='MuiTabs-flexContainer css-k008qs']//button[2]")));
 		    Hiddenposts.click();
+	        
 			 
 		    Assert.assertTrue(driver.findElement(By.xpath("//div[@class='MuiBox-root css-0']/div[@id='simple-tabpanel-1']/div/p//div[@class='mt-3']/div[1]/div[1]//div[@class='d-flex justify-content-between']//div[2]//a")).isDisplayed());
 			Thread.sleep(9000);
@@ -164,12 +161,12 @@ public class VerifySavePost {
 	        
 	        }
 	        
-	           @Test (priority = 5)
+	            @Test (priority = 5)
 		        public void verifyCopylink() throws Exception {
-	           Thread.sleep(8000);
+	            Thread.sleep(8000);
 	        	WebElement Homepage = new WebDriverWait(driver, 60)
 	           .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='navbar-nav']//span[text()='Home'] ")));
-	           Homepage.click();
+	            Homepage.click();
 	        	Thread.sleep(9000);
 	   			Assert.assertTrue(driver.findElement(By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//a[@class='my-dropdown-toggle h5 text-decoration-none text-black' and @data-toggle='dropdown']")).isDisplayed());
 	   			Thread.sleep(9000);

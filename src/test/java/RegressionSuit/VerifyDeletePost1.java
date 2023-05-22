@@ -1,10 +1,6 @@
 package RegressionSuit;
 
-import static org.testng.Assert.assertEquals;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -12,44 +8,49 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.Browser.Pojo;
 import com.automation.pageObjectModel.HomePage;
 
+
 public class VerifyDeletePost1 {
-	
-	WebDriver driver;
-	HomePage homePage = new HomePage(driver);
-	
-	@BeforeClass
-	public void launchBrowser(){
-		driver = Pojo.openChromeBrowser();
+
+		WebDriver driver;
 		
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		@BeforeClass
+		public void launchBrowser(){
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32 (1)\\chromedriver.exe");
+			
+			driver = new ChromeDriver();
+			
+			driver.get("https://myconnect.tinggit.com/");
+			HomePage homePage = new HomePage(driver);
+			homePage.sendValidUserNameAndValidPassword();
+			homePage.clickLoginButton();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
+			driver.manage().window().maximize();
+			
+			
+		}
 		
-		driver.manage().window().maximize();
-		
-		
-	}
-	
-	    @BeforeClass 
-	
-	    public void launchMyConnectTing() {
-		driver.get("https://myconnect.tinggit.com/");
-		HomePage homePage = new HomePage(driver);
-		homePage.sendValidCredential();
-		homePage.clickLoginButton();
-	
-	}
+		@BeforeMethod 
+		public void launchMyConnectTing() throws InterruptedException {
+			
+			
+			System.out.println("hello");
+			Thread.sleep(9000);
+		}
+
 
 	        @Test (priority = 1)
 	        public void verifyDeletecomment() throws InterruptedException {
@@ -68,7 +69,6 @@ public class VerifyDeletePost1 {
 			actions11.click(postButton1).perform();
 			Thread.sleep(9000);
 			WebElement editpost=driver.findElement( By.xpath("//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//a[@class='my-dropdown-toggle h5 text-decoration-none text-black' and @data-toggle='dropdown']"));
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);",editpost);
 			Actions actions3= new Actions(driver);
 			actions3.click(editpost).perform();
 			Thread.sleep(9000);

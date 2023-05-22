@@ -3,17 +3,15 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="RegressionSuit.VerifyLoginPage">
+      <class name="RegressionSuit.VerifyThreeDotsMenu">
         <methods>
-          <include name="verifyLoginWithInvalidUsernameAndInvalidPassword"/>
+          <include name="verifypreSavepost"/>
           <include name="launchBrowser"/>
-          <include name="verifyLoginWithValidUserNameAndPassword"/>
-          <include name="goToLoginPage"/>
-          <include name="verifyLoginWithValidUsernameAndInvalidPassword"/>
-          <include name="verifyLoginWithInvalidUsernameAndvalidPassword"/>
+          <include name="launchMyConnectTing"/>
+          <include name="verifySavepost1"/>
           <include name="goToMainPage"/>
         </methods>
-      </class> <!-- RegressionSuit.VerifyLoginPage -->
+      </class> <!-- RegressionSuit.VerifyThreeDotsMenu -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

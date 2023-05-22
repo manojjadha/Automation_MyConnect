@@ -1,28 +1,28 @@
 package RegressionSuit;
-import static org.testng.Assert.assertEquals;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.automation.pageObjectModel.HomePage;
 
 
-public class VerifyLeaderSpeakPage {
+
+public class VerifyLeaderspeakPage {
 
 		WebDriver driver;
 		
@@ -32,7 +32,7 @@ public class VerifyLeaderSpeakPage {
 			driver = new ChromeDriver();
 			driver.get("https://myconnect.tinggit.com/");
 			HomePage homePage = new HomePage(driver);
-			homePage.sendValidCredential();
+			homePage.sendValidUserNameAndValidPassword();
 			homePage.clickLoginButton();
 			
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

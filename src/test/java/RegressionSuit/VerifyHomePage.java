@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 import com.automation.pageObjectModel.HomePage;
 
 
+
 public class VerifyHomePage {
 
 		WebDriver driver;
@@ -34,7 +35,7 @@ public class VerifyHomePage {
 			
 			driver.get("https://myconnect.tinggit.com/");
 			HomePage homePage = new HomePage(driver);
-			homePage.sendValidCredential();
+			homePage.sendValidUserNameAndValidPassword();
 			homePage.clickLoginButton();
 			
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -297,7 +298,11 @@ public class VerifyHomePage {
 		public void goToMainPage() {
 		
 		}
-		   }
+
+		
+			
+		}
+		   
 		
 		
 		

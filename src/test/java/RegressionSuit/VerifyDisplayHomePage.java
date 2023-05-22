@@ -19,29 +19,30 @@ import org.testng.annotations.Test;
 
 import com.automation.pageObjectModel.HomePage;
 
-
-public class VerifyDisplayHpage {
+public class VerifyDisplayHomePage {
 
 		WebDriver driver;
 		
 		@BeforeClass
 		public void launchBrowser(){
 			
-			System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32 (1)\\chromedriver.exe");
-			
-			driver = new ChromeDriver();
-			
-			driver.get("https://myconnect.tinggit.com/");
-			HomePage homePage = new HomePage(driver);
-			homePage.sendValidCredential();
-			homePage.clickLoginButton();
-			
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-			
-			driver.manage().window().maximize();
-			
-			
-		}
+				
+				System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32 (1)\\chromedriver.exe");
+				
+				driver = new ChromeDriver();
+				
+				driver.get("https://myconnect.tinggit.com/");
+				HomePage homePage = new HomePage(driver);
+				homePage.sendValidUserNameAndValidPassword();
+				homePage.clickLoginButton();
+				
+				
+				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+				
+				driver.manage().window().maximize();
+				
+				
+			}
 		
 		@BeforeMethod 
 		public void launchMyConnectTing() {
@@ -80,7 +81,7 @@ public class VerifyDisplayHpage {
 	   .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='py-1']")));
 	    Back.click();
 						
-		     }
+	   }
 		
 		@Test (priority = 3)
 		public void verifyNewJoinerssection() throws InterruptedException {

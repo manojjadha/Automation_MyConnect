@@ -1,52 +1,55 @@
 package RegressionSuit;
 
 
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-import com.Browser.Pojo;
 import com.automation.pageObjectModel.HomePage;
 
-public class VerifycelebrationPage {
-	
-	WebDriver driver;
-	HomePage homePage = new HomePage(driver);
-	@BeforeClass
-	public void launchBrowser(){
-		driver = Pojo.openChromeBrowser();
+
+public class VerifyCelebrationPage {
+
+		WebDriver driver;
 		
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		@BeforeClass
+		public void launchBrowser() throws InterruptedException{
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32 (1)\\chromedriver.exe");
+			
+			driver = new ChromeDriver();
+			
+			driver.get("https://myconnect.tinggit.com/");
+			HomePage homePage = new HomePage(driver);
+			homePage.sendValidUserNameAndValidPassword();
+			homePage.clickLoginButton();
+			
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
+			driver.manage().window().maximize();
+			Thread.sleep(9000);
+			
+		}
 		
-		driver.manage().window().maximize();
-		
-		
-	}
-	
-	@BeforeClass 
-	
-	public void launchMyConnectTing() throws InterruptedException {
-		driver.get("https://myconnect.tinggit.com/");
-		HomePage homePage = new HomePage(driver);
-		homePage.sendValidCredential();
-		homePage.clickLoginButton();
-		Thread.sleep(12000);
-		
-	
-	}
+		@BeforeMethod 
+		public void launchMyConnectTing() throws InterruptedException {
+			
+			
+			System.out.println("hello");
+		}
+
 	@Test (priority = 1)
 	public void verifybirthannouncement() throws InterruptedException {
 	Thread.sleep(12000);
@@ -59,7 +62,8 @@ public class VerifycelebrationPage {
     Actions actions= new Actions(driver);
 	actions.click(birthannouncement).perform();
 	Thread.sleep(9000);
-/*	WebElement commentBox=driver.findElement( By.xpath("//textarea[@placeholder='Write a comment..']"));
+	}
+	/*WebElement commentBox=driver.findElement( By.xpath("//textarea[@placeholder='Write a comment..']"));
 	Actions actions1= new Actions(driver);
 	actions1.click(commentBox).perform();
 	commentBox.sendKeys("test");
@@ -94,9 +98,9 @@ public class VerifycelebrationPage {
 	Thread.sleep(9000);
 	WebElement yesdeleteButton=driver.findElement( By.xpath("//button[text()='Yes, Delete']"));
     Actions actions8= new Actions(driver);
-	actions8.click(yesdeleteButton).perform();*/
+	actions8.click(yesdeleteButton).perform();
 	
-	}
+	}*/
 	
 	@Test (priority = 2)
 	public void verifybirthdays() throws InterruptedException {

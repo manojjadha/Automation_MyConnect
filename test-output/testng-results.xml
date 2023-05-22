@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="4" passed="0" failed="4" skipped="0">
+<testng-results total="6" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-18T07:18:14Z" name="Default suite" finished-at="2023-05-18T07:18:44Z" duration-ms="30038">
+  <suite started-at="2023-05-22T14:05:45Z" name="Default suite" finished-at="2023-05-22T14:10:06Z" duration-ms="260313">
     <groups>
     </groups>
-    <test started-at="2023-05-18T07:18:14Z" name="Default test" finished-at="2023-05-18T07:18:44Z" duration-ms="30038">
-      <class name="RegressionSuit.VerifyLoginPage">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:14Z" name="launchBrowser" finished-at="2023-05-18T12:48:26Z" duration-ms="11677" status="PASS">
+    <test started-at="2023-05-22T14:05:45Z" name="Default test" finished-at="2023-05-22T14:10:06Z" duration-ms="260313">
+      <class name="RegressionSuit.VerifyThreeDotsMenu">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:35:45Z" name="launchBrowser" finished-at="2023-05-22T19:36:04Z" duration-ms="18222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="goToLoginPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:26Z" name="goToLoginPage" finished-at="2023-05-18T12:48:33Z" duration-ms="6464" status="PASS">
+        <test-method is-config="true" signature="launchMyConnectTing()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:36:04Z" name="launchMyConnectTing" finished-at="2023-05-22T19:36:04Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToLoginPage -->
-        <test-method signature="verifyLoginWithValidUserNameAndPassword()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:33Z" name="verifyLoginWithValidUserNameAndPassword" finished-at="2023-05-18T12:48:33Z" duration-ms="5" status="FAIL">
-          <exception class="java.lang.Error">
+        </test-method> <!-- launchMyConnectTing -->
+        <test-method signature="verifypreSavepost()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:36:04Z" name="verifypreSavepost" finished-at="2023-05-22T19:36:37Z" duration-ms="33127" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Saved Post']"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'THP_MANOJJ', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\THP\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 849b92826774ef64a7c17a6e12793b58
+*** Element info: {Using=xpath, value=//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Saved Post']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-
-	at RegressionSuit.VerifyLoginPage.verifyLoginWithValidUserNameAndPassword(VerifyLoginPage.java:38)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Saved Post']"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'THP_MANOJJ', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\THP\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 849b92826774ef64a7c17a6e12793b58
+*** Element info: {Using=xpath, value=//div[@class='d-lg-block d-md-block d-none d-sm-none d-xl-block d-xxl-block']//div[@class='infinite-scroll-component__outerdiv']/div[1]/div[1]//div[@class='dropdown show']//ul//li[text()='Saved Post']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at RegressionSuit.VerifyThreeDotsMenu.verifypreSavepost(VerifyThreeDotsMenu.java:63)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,32 +80,57 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithValidUserNameAndPassword -->
-        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:33Z" name="goToMainPage" finished-at="2023-05-18T12:48:35Z" duration-ms="2018" status="PASS">
+        </test-method> <!-- verifypreSavepost -->
+        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:36:37Z" name="goToMainPage" finished-at="2023-05-22T19:36:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToMainPage -->
-        <test-method is-config="true" signature="goToLoginPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:35Z" name="goToLoginPage" finished-at="2023-05-18T12:48:36Z" duration-ms="1337" status="PASS">
+        <test-method is-config="true" signature="launchMyConnectTing()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:36:37Z" name="launchMyConnectTing" finished-at="2023-05-22T19:36:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToLoginPage -->
-        <test-method signature="verifyLoginWithInvalidUsernameAndInvalidPassword()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:36Z" name="verifyLoginWithInvalidUsernameAndInvalidPassword" finished-at="2023-05-18T12:48:36Z" duration-ms="1" status="FAIL">
-          <exception class="java.lang.Error">
+        </test-method> <!-- launchMyConnectTing -->
+        <test-method signature="verifySavepost1()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:36:37Z" name="verifySavepost1" finished-at="2023-05-22T19:37:00Z" duration-ms="22852" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='dropdown-menu bg-default shadow show']//li[3]"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'THP_MANOJJ', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\THP\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 849b92826774ef64a7c17a6e12793b58
+*** Element info: {Using=xpath, value=//*[@class='dropdown-menu bg-default shadow show']//li[3]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-
-	at RegressionSuit.VerifyLoginPage.verifyLoginWithInvalidUsernameAndInvalidPassword(VerifyLoginPage.java:48)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='dropdown-menu bg-default shadow show']//li[3]"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'THP_MANOJJ', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\THP\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 849b92826774ef64a7c17a6e12793b58
+*** Element info: {Using=xpath, value=//*[@class='dropdown-menu bg-default shadow show']//li[3]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at RegressionSuit.VerifyThreeDotsMenu.verifySavepost1(VerifyThreeDotsMenu.java:92)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,119 +157,63 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:36Z" name="goToMainPage" finished-at="2023-05-18T12:48:38Z" duration-ms="2007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToMainPage -->
-        <test-method is-config="true" signature="goToLoginPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:38Z" name="goToLoginPage" finished-at="2023-05-18T12:48:39Z" duration-ms="1165" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToLoginPage -->
-        <test-method signature="verifyLoginWithInvalidUsernameAndvalidPassword()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:39Z" name="verifyLoginWithInvalidUsernameAndvalidPassword" finished-at="2023-05-18T12:48:39Z" duration-ms="1" status="FAIL">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-
-	at RegressionSuit.VerifyLoginPage.verifyLoginWithInvalidUsernameAndvalidPassword(VerifyLoginPage.java:55)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
-	at org.testng.TestNG.run(TestNG.java:1030)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidUsernameAndvalidPassword -->
-        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:39Z" name="goToMainPage" finished-at="2023-05-18T12:48:41Z" duration-ms="2068" status="PASS">
+        </test-method> <!-- verifySavepost1 -->
+        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:37:00Z" name="goToMainPage" finished-at="2023-05-22T19:37:00Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToMainPage -->
-        <test-method is-config="true" signature="goToLoginPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:41Z" name="goToLoginPage" finished-at="2023-05-18T12:48:42Z" duration-ms="1209" status="PASS">
+        <test-method signature="verifyHidepost()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:37:00Z" name="verifyHidepost" finished-at="2023-05-22T19:37:37Z" duration-ms="37597" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToLoginPage -->
-        <test-method signature="verifyLoginWithValidUsernameAndInvalidPassword()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:42Z" name="verifyLoginWithValidUsernameAndInvalidPassword" finished-at="2023-05-18T12:48:42Z" duration-ms="1" status="FAIL">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	LoginPage cannot be resolved to a type
-	LoginPage cannot be resolved to a type
-
-	at RegressionSuit.VerifyLoginPage.verifyLoginWithValidUsernameAndInvalidPassword(VerifyLoginPage.java:62)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
-	at org.testng.TestNG.run(TestNG.java:1030)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+        </test-method> <!-- verifyHidepost -->
+        <test-method is-config="true" signature="launchMyConnectTing()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:37:00Z" name="launchMyConnectTing" finished-at="2023-05-22T19:37:00Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithValidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyLoginPage@125290e5]" started-at="2023-05-18T12:48:42Z" name="goToMainPage" finished-at="2023-05-18T12:48:44Z" duration-ms="2061" status="PASS">
+        </test-method> <!-- launchMyConnectTing -->
+        <test-method is-config="true" signature="launchMyConnectTing()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:37:37Z" name="launchMyConnectTing" finished-at="2023-05-22T19:37:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchMyConnectTing -->
+        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:37:37Z" name="goToMainPage" finished-at="2023-05-22T19:37:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToMainPage -->
-      </class> <!-- RegressionSuit.VerifyLoginPage -->
+        <test-method signature="verifyHidepost1()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:37:37Z" name="verifyHidepost1" finished-at="2023-05-22T19:38:36Z" duration-ms="58454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHidepost1 -->
+        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:38:36Z" name="goToMainPage" finished-at="2023-05-22T19:38:36Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToMainPage -->
+        <test-method signature="verifyCopylink()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:38:36Z" name="verifyCopylink" finished-at="2023-05-22T19:39:21Z" duration-ms="45404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCopylink -->
+        <test-method is-config="true" signature="launchMyConnectTing()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:38:36Z" name="launchMyConnectTing" finished-at="2023-05-22T19:38:36Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchMyConnectTing -->
+        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:39:21Z" name="goToMainPage" finished-at="2023-05-22T19:39:21Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToMainPage -->
+        <test-method signature="verifyReportPost()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:39:21Z" name="verifyReportPost" finished-at="2023-05-22T19:40:06Z" duration-ms="44571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyReportPost -->
+        <test-method is-config="true" signature="launchMyConnectTing()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:39:21Z" name="launchMyConnectTing" finished-at="2023-05-22T19:39:21Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchMyConnectTing -->
+        <test-method is-config="true" signature="goToMainPage()[pri:0, instance:RegressionSuit.VerifyThreeDotsMenu@5c669da8]" started-at="2023-05-22T19:40:06Z" name="goToMainPage" finished-at="2023-05-22T19:40:06Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToMainPage -->
+      </class> <!-- RegressionSuit.VerifyThreeDotsMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
